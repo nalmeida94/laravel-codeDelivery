@@ -2,6 +2,7 @@
 
 namespace codeDelivery\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use codeDelivery\Models\Product;
 use codeDelivery\Models\Category;
@@ -23,8 +24,9 @@ class ProductsController extends Controller
     public function index()
     {    	
     	$products = $this->repository->paginate(20);
-    	
-    	return view('admin.products.index', compact('products'));
+    	$filename = 'a.jpeg';
+    	return view('admin.products.index', compact('products', 'filename'));    	
+    	//<img src="/admin/product/{{ $product['image'] }}" height="30px" width="30px" />
     }
 
     public function create()

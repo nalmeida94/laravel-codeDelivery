@@ -1,12 +1,12 @@
 <?php 
 
 namespace codeDelivery\Services;
+
 use codeDelivery\Models\Client;
 use codeDelivery\Models\User;
-use codeDelivery\Http\Requests\AdminClientRequest
+use codeDelivery\Http\Requests\AdminClientRequest;
 
-class ClientService
-{
+class ClientService{
 	private $client;
 	private $user;
 

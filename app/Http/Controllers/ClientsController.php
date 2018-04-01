@@ -5,7 +5,7 @@ namespace codeDelivery\Http\Controllers;
 use Illuminate\Http\Request;
 use codeDelivery\Models\Client;
 use codeDelivery\Models\User;
-use codeDelivery\Services\ClientService;
+use codeDelivery\Services\ClientSService;
 use codeDelivery\Http\Requests\AdminClientRequest;
 use Illuminate\View\Middleware\ErrorBinder;
 
@@ -14,7 +14,7 @@ class ClientsController extends Controller
 {
 	private $repository;
     private $clientService;
-	public function __construct(Client $c, ClientService $cS)
+	public function __construct(Client $c, ClientSService $cS)
     //public function __construct(Client $c)
 	{
 		$this->repository = $c;
@@ -58,7 +58,7 @@ class ClientsController extends Controller
     	//$up = $this->repository::find($id);    
     	//$up->update($data);        
         //$this->clientService->update($data, $id);
-        $this->clientService->update($request, $id);
+        $this->clientService->uupdate($request, $id);
     	return redirect()->route('admin.clients.index');
 	}
     

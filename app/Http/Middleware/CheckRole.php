@@ -15,7 +15,8 @@ class CheckRole
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
+    {	
+		echo "rodou middleare";
         if(!Auth::check()){
             return redirect('/');
         }

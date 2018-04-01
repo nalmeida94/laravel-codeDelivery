@@ -4,6 +4,7 @@
 @section('content')
 	<div class="container">
 		<h3>Produtos</h3>		
+		<img src="/img/{{$filename}}" />
 		<a href="{{ route('admin.products.create') }}" class="btn btn-default">Novo produto</a>
 		<br><br>		
 		<table class="table table-bordered">
